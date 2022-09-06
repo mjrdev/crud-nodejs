@@ -2,10 +2,10 @@ version: "3.9"
 
 services:
   node:
-    image: node:16.17
     build: .
+    command: yarn dev
     ports:
       - "3000:3000"
     volumes:
-      - .:/home/node/app
+      - .:/usr/node/app
     restart: always

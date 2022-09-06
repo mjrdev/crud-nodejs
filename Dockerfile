@@ -1,9 +1,11 @@
 FROM node:16-alpine
-WORKDIR /home/node/app
+WORKDIR /usr/node/app
+
+COPY package*.json ./
+
+RUN yarn
 
 COPY . .
-
-RUN yarn install
 
 EXPOSE 3000
 
