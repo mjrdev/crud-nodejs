@@ -1,11 +1,9 @@
-version: "3.9"
+version: "3.2"
 
 services:
-  node:
-    build: .
-    command: yarn dev
-    ports:
-      - "3000:3000"
-    volumes:
-      - .:/usr/node/app
+  mongo:
+    container_name: mongodb
+    image: mongo
     restart: always
+    ports:
+      - "27017:27017"
